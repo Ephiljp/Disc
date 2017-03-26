@@ -1,0 +1,42 @@
+﻿<Controls:MetroWindow x:Class="Disc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Disc"
+        mc:Ignorable="d"
+        Title="Metodologia DISC" Height="384.845" Width="573.008">
+    <Grid>
+
+        <Controls:Tile x:Name="btnMenu" Title="    Menu" TextElement.Foreground="Black"
+                    TiltFactor="2"
+                    Width="60" Height="56" 
+                    Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}" FontWeight="Bold" Click="btnMenu_Click">
+            <Image Source="/img/menu.png" Height="25" Width="25" Margin="0,-20,0,0"/>
+        </Controls:Tile>
+        <Image HorizontalAlignment="Left" Height="334" Margin="194,10,0,0" VerticalAlignment="Top" Width="361" Source="img/discLogo.png"/>
+        <Controls:Flyout x:Name="flyMenu" Header="Menu" Position="left" Width="194" >
+            <StackPanel>
+                <Controls:Tile x:Name="btnNovoTeste" Title="Novo Teste" 
+                    TiltFactor="2"
+                    Width="200" Height="75" 
+                    Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnNovoTeste_Click">
+                    <Image Source="/img/testeNovo.png" Margin="0,-10,0,0" Height="50"/>
+                </Controls:Tile>
+                <Controls:Tile x:Name="btnTestesFeitos" Title="Testes Feitos" 
+            TiltFactor="2"
+            Width="200" Height="86" 
+            Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnTestesFeitos_Click">
+                    <Image Source="/img/testeFinalizado.png" Margin="0,-10,0,0" Height="50"/>
+                </Controls:Tile>
+                <Controls:Tile x:Name="btnEditar" Title="Editar perfil" 
+            TiltFactor="2"
+            Width="200" Height="77" 
+            Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnEditar_Click">
+                    <Image Source="img/perfil.png" Margin="0,-10,0,0" Height="50"/>
+                </Controls:Tile>
+            </StackPanel>
+        </Controls:Flyout>
+    </Grid>
+</Controls:MetroWindow>
