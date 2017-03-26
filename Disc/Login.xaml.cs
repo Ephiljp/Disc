@@ -32,7 +32,7 @@ namespace Disc
 
             var listaUsuarios = repoUsuario.Liste();
             cmbUsuarios.DataContext = listaUsuarios;
-
+             
 
         }
 
