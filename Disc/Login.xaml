@@ -11,19 +11,29 @@
         Loaded="MetroWindow_Loaded">
 
     <Grid>
+        <Label x:Name="lblCarregando" Content="Carregando banco de dados, aguarde..." HorizontalAlignment="Left" Margin="11,4,0,0" VerticalAlignment="Top"/>
+        <Grid Panel.ZIndex="1">
+            <DockPanel>
+                <Controls:ProgressRing IsActive="true" Visibility="Visible" x:Name="progress" Margin="0,50,0,66" Height="60" Width="80" />
+            </DockPanel>
+        </Grid>
+        <Controls:Tile x:Name="btnRecarregar" Margin="297,30,0,0" Width="25" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnRecarregar_Click" Background="{x:Null}" >
+            <Image Source="img/refresh.png" Height="20" Margin="0,0,0,0"/>
+        </Controls:Tile>
         <Controls:Tile x:Name="btnLogin" Title="Login" Margin="40,121,0,0" Width="93" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnLogin_Click" >
             <Image Source="img/login.png" Height="20" Margin="0,0,-50,0"/>
         </Controls:Tile>
-        <Label Content="Senha:" HorizontalAlignment="Left" Margin="15,79,0,0" VerticalAlignment="Top" Width="50"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="88,79,0,0" VerticalAlignment="Top" Width="209"/>
-        <Label Content="Usuário:" HorizontalAlignment="Left" Margin="11,30,0,0" VerticalAlignment="Top" Width="54"/>
-        <ComboBox x:Name="cmbUsuarios" HorizontalAlignment="Left" Margin="88,30,0,0" VerticalAlignment="Top" Width="209"/>
+        <Label x:Name="lblSenha" Content="Senha:" HorizontalAlignment="Left" Margin="15,79,0,0" VerticalAlignment="Top" Width="50"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="88,79,0,0" VerticalAlignment="Top" Width="209"/>
+        <Label x:Name="lblUsuario" Content="Usuário:" HorizontalAlignment="Left" Margin="11,30,0,0" VerticalAlignment="Top" Width="54"/>
+        <ComboBox x:Name="cmbUsuarios" ItemsSource="{Binding}" DisplayMemberPath="Nome" HorizontalAlignment="Left" Margin="88,30,0,0" VerticalAlignment="Top" Width="209"/>
         <Controls:Tile x:Name="btnRegistrar" Title="Registrar" Margin="151,121,0,23" Width="94" Height="Auto" HorizontalAlignment="Left" Click="btnRegistrar_Click">
             <Image Source="img/add.png" Height="20" Margin="10,0,-60,0"/>
         </Controls:Tile>
         <Controls:Tile x:Name="btnSair" Title="Sair" Margin="260,121,0,0" Width="80" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnSair_Click">
             <Image Source="img/sair.png" Height="20" Margin="5,0,-30,0"/>
         </Controls:Tile>
+
 
     </Grid>
 </Controls:MetroWindow>

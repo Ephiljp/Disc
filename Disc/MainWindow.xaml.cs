@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,19 @@ namespace Disc
    
     public partial class MainWindow 
     {
+        public Usuario Usuario { get; set; }
         public MainWindow()
         {
             InitializeComponent();
         }
 
-       
+        public MainWindow(Usuario usuario)
+        {
+            InitializeComponent();
+
+            this.Usuario = usuario;
+
+        }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
@@ -43,7 +51,8 @@ namespace Disc
 
         private void btnEditar_Click(object sender, RoutedEventArgs e)
         {
-            var formCadastro = new FormCadastroDeUsuario();
+            var usuario = Usuario;
+            var formCadastro = new FormCadastroDeUsuario(usuario);
             formCadastro.ShowDialog();
 
            

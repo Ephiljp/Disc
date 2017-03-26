@@ -151,6 +151,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="img\refresh.png" />
     <Resource Include="img\sair.png" />
     <Resource Include="img\add.png" />
     <Resource Include="img\login.png" />

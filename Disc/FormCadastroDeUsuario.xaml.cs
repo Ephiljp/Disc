@@ -1,4 +1,5 @@
 ﻿using Model;
+using Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+
+
+
 
 namespace Disc
 {
@@ -35,6 +39,47 @@ namespace Disc
 
         }
 
-      
+        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            var usuario = (Usuario)this.DataContext;
+
+            var repositorio = new RepositorioUsuario();
+
+
+            if (usuario.Codigo == 0)
+            {
+                if (txtSenha.Password != txtConfSenha.Password)
+                {
+                    MessageBox.Show("As senhas devem ser iguais");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtSenha.Password) || string.IsNullOrEmpty(txtConfSenha.Password))
+                {
+                    MessageBox.Show("A senha deve ser informada");
+                    return;
+                }
+                usuario.Senha = txtSenha.Password;
+
+            }
+
+
+            if (usuario.Codigo == 0)
+            {
+
+
+                repositorio.Adicione(usuario);                //Cadastrar no banco de dados!!
+            }
+            else
+            {
+                //Editando
+                repositorio.Atualize(usuario);   //Atualizar no banco de dados!! 
+
+            }
+
+            this.Close();
+
+            
+        }
     }
 }
