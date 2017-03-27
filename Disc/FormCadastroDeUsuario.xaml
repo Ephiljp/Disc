@@ -7,7 +7,8 @@
         xmlns:local="clr-namespace:Disc"
         mc:Ignorable="d"
         Title="FormCadastroDeUsuario" Height="134.733" Width="359.072"
-        ResizeMode="NoResize"      >
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"              >
     <Grid>
         <Controls:Tile x:Name="btnSalvar" Title="" Margin="282,43,0,0" Width="61" Height="55" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnSalvar_Click">
             <Image Source="img/save.png" Height="30"/>
@@ -15,7 +16,7 @@
         <Label Content="Nome:" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Width="50"/>
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="51,41,0,0" VerticalAlignment="Top" Width="50"/>
         <Label Content="Repetir Senha:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="91"/>
-        <TextBox Text="{Binding Nome}" HorizontalAlignment="Left" Height="23" Margin="106,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="152"/>
+        <TextBox x:Name="txtNome" Text="{Binding Nome}" HorizontalAlignment="Left" Height="23" Margin="106,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="152"/>
         <PasswordBox x:Name="txtSenha" HorizontalAlignment="Left" Margin="106,41,0,0" VerticalAlignment="Top" Width="152"/>
         <PasswordBox x:Name="txtConfSenha" HorizontalAlignment="Left" Margin="106,72,0,0" VerticalAlignment="Top" Width="152"/>
 

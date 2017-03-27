@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="Login" Height="211.4" Width="383.072"
         ResizeMode="NoResize"   
-        Loaded="MetroWindow_Loaded">
+        Loaded="MetroWindow_Loaded"
+        WindowStartupLocation="CenterScreen"              >
 
     <Grid>
         <Label x:Name="lblCarregando" Content="Carregando banco de dados, aguarde..." HorizontalAlignment="Left" Margin="11,4,0,0" VerticalAlignment="Top"/>

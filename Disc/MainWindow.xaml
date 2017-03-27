@@ -6,17 +6,37 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Disc"
         mc:Ignorable="d"
-        Title="Metodologia DISC" Height="384.845" Width="573.008">
+        Title="Metodologia DISC" Height="384.845" Width="573.008"
+        WindowStartupLocation="CenterScreen"              >
     <Grid>
+        <Grid>
+            <WrapPanel Margin="10,74,368,10" TextBlock.FontSize="11"  >
+                <Label Content="Olá" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label x:Name="lblNome"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="158" FontWeight="Bold"/>
+                <TextBlock Width="185" Height="214">
+                      Seja Bem vindo, já conhece o  <LineBreak/>                     
+                    DISC??<LineBreak/>
+                    <LineBreak/>
+                     O DISC foi criado pelo pscicólogo<LineBreak/>
+                    Dr. William Moulton Marston para<LineBreak/>
+                    análise de comportamento.<LineBreak/>
+                    <LineBreak/>
+                       Acesse o menu ali em cima e <LineBreak/>
+                    comece agora o teste e saiba<LineBreak/>
+                    agora qual o seu perfil!!
+                </TextBlock>
 
-        <Controls:Tile x:Name="btnMenu" Title="    Menu" TextElement.Foreground="Black"
+
+            </WrapPanel>
+        </Grid>
+        <Controls:Tile x:Name="btnMenu" Title="    Menu" TextElement.Foreground="Black" TextOptions.TextFormattingMode="Display"
                     TiltFactor="2"
                     Width="60" Height="56" 
-                    Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}" FontWeight="Bold" Click="btnMenu_Click">
+                    Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}" FontWeight="Bold" Click="btnMenu_Click" >
             <Image Source="/img/menu.png" Height="25" Width="25" Margin="0,-20,0,0"/>
         </Controls:Tile>
         <Image HorizontalAlignment="Left" Height="334" Margin="194,10,0,0" VerticalAlignment="Top" Width="361" Source="img/discLogo.png"/>
-        <Controls:Flyout x:Name="flyMenu" Header="Menu" Position="left" Width="194" >
+        <Controls:Flyout x:Name="flyMenu" Header="Menu" Position="left" Width="194" Visibility="Hidden">
             <StackPanel>
                 <Controls:Tile x:Name="btnNovoTeste" Title="Novo Teste" 
                     TiltFactor="2"
@@ -38,5 +58,6 @@
                 </Controls:Tile>
             </StackPanel>
         </Controls:Flyout>
+
     </Grid>
 </Controls:MetroWindow>

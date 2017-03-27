@@ -95,12 +95,34 @@ namespace Disc
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            if (cmbUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione ou crie um usuário");
+                return;
+            }
+            var senha = txtPassword.Password;
             var usuario = (Usuario)cmbUsuarios.SelectedItem;
-            var formPrincipal = new MainWindow(usuario);
-            formPrincipal.ShowDialog();
 
-            this.Close();
+            var repoUsuario = new RepositorioUsuario();
+
+            if (repoUsuario.ValideAcesso(usuario.Codigo, senha))
+            {
+
+                this.Hide();
+                var formPrincipal = new MainWindow(usuario);
+                formPrincipal.ShowDialog();
+                this.Close();
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("Dados incorretos");
+                return;
+            }
+
+           
         }
 
         private void btnRegistrar_Click(object sender, RoutedEventArgs e)

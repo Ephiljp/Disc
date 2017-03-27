@@ -31,6 +31,8 @@ namespace Disc
 
             this.Usuario = usuario;
 
+            lblNome.Content = usuario.Nome;
+
         }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
@@ -41,12 +43,14 @@ namespace Disc
 
         private void btnNovoTeste_Click(object sender, RoutedEventArgs e)
         {
-
+            var formNovoteste = new FormNovoTeste(Usuario);
+            formNovoteste.ShowDialog();
         }
 
         private void btnTestesFeitos_Click(object sender, RoutedEventArgs e)
         {
-
+            var formTesteFeito = new FormTestesFeitos(Usuario);
+            formTesteFeito.ShowDialog();
         }
 
         private void btnEditar_Click(object sender, RoutedEventArgs e)
@@ -59,8 +63,7 @@ namespace Disc
 
         }
 
-       
-
+     
     }
 
 
