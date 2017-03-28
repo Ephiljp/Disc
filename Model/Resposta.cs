@@ -14,7 +14,13 @@ namespace Model
 
         public int Codigo { get; set; }
 
-     
+        public int D { get; set; }
+
+        public int I { get; set; }
+
+        public int S { get; set; }
+
+        public int C { get; set; }
 
         public virtual List<Usuario> Usuario { get; set; }
 

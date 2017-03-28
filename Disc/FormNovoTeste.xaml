@@ -6,8 +6,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:Disc"
         mc:Ignorable="d"
-        Title="Teste"  Height="384.845" Width="573.008"
-        WindowStartupLocation="CenterScreen"  >
+        Title="Teste"  Height="710.845" Width="767.008"
+        WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
 
     <Window.Resources>
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
@@ -15,21 +15,20 @@
 
     <Grid>
         <TabControl>
-            <TabItem Visibility="Visible" Header="Tab1" x:Name="tab1">
+            <TabItem Visibility="Collapsed" Header="Tab1" x:Name="tab1">
                 <Grid>
-                    <TextBlock FontWeight="Bold" FontFamily="Arial" FontSize="14"><Run Text="Selecione em cada Quadrante como você se define:"/><InlineUIContainer>
-                            
-                        </InlineUIContainer></TextBlock>
-                    <Button Content="Button" Width="75" Height="20" Margin="474,274,10,10" Click="btnIr_Click"/>
-                    <GroupBox  HorizontalAlignment="Left" Height="125" Margin="10,23,0,0" VerticalAlignment="Top" Width="88">
-                        <ListBox x:Name="boxResposta01" Margin="0,0,-2,-3">
+                    <TextBlock FontWeight="Bold" FontFamily="Arial" FontSize="14" Margin="10,0,41,0" Height="28" VerticalAlignment="Top"><Run Text="Selecione em cada Quadrante o que MELHOR te define:"/><InlineUIContainer>
+                                                    </InlineUIContainer></TextBlock>
+
+                    <GroupBox Header="01" HorizontalAlignment="Left" Height="140" Margin="10,23,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta1" Margin="0,0,-2,-3" >
                             <ListBoxItem Content="Modesto"/>
                             <ListBoxItem Content="Hesitante"/>
                             <ListBoxItem Content="Ativo"/>
                             <ListBoxItem Content="Sarcastico"/>
                         </ListBox>
                     </GroupBox>
-                    <GroupBox  HorizontalAlignment="Left" Height="125" Margin="103,23,0,0" VerticalAlignment="Top" Width="88">
+                    <GroupBox  Header="02" HorizontalAlignment="Left" Height="140" Margin="115,23,0,0" VerticalAlignment="Top" Width="100">
                         <ListBox x:Name="boxResposta2" Margin="0,0,-2,-3">
                             <ListBoxItem Content="Dependente"/>
                             <ListBoxItem Content="Inibido"/>
@@ -37,7 +36,7 @@
                             <ListBoxItem Content="Estabanado"/>
                         </ListBox>
                     </GroupBox>
-                    <GroupBox  HorizontalAlignment="Left" Height="125" Margin="196,23,0,0" VerticalAlignment="Top" Width="88">
+                    <GroupBox Header="03" HorizontalAlignment="Left" Height="140" Margin="220,23,0,0" VerticalAlignment="Top" Width="100">
                         <ListBox x:Name="boxResposta3" Margin="0,0,-2,-3">
                             <ListBoxItem Content="Inseguro"/>
                             <ListBoxItem Content="Introvertido"/>
@@ -45,12 +44,209 @@
                             <ListBoxItem Content="Obstinado"/>
                         </ListBox>
                     </GroupBox>
+                    <GroupBox  Header="04" HorizontalAlignment="Left" Height="140" Margin="325,23,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta4" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Quieto"/>
+                            <ListBoxItem Content="Distante"/>
+                            <ListBoxItem Content="Analisador"/>
+                            <ListBoxItem Content="Desafiador"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="05" HorizontalAlignment="Left" Height="140" Margin="430,23,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta5" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Moderado"/>
+                            <ListBoxItem Content="Pessimista"/>
+                            <ListBoxItem Content="Mudanças"/>
+                            <ListBoxItem Content="Rebelde"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="06" HorizontalAlignment="Left" Height="140" Margin="535,23,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta6" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Calmo"/>
+                            <ListBoxItem Content="Desconfiado"/>
+                            <ListBoxItem Content="Agitado"/>
+                            <ListBoxItem Content="Árbitrario"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="07" HorizontalAlignment="Left" Height="140" Margin="640,23,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta7" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Conservador"/>
+                            <ListBoxItem Content="Reservado"/>
+                            <ListBoxItem Content="Impetuoso"/>
+                            <ListBoxItem Content="Teimoso"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="08" HorizontalAlignment="Left" Height="140" Margin="10,168,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta8" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Delicado"/>
+                            <ListBoxItem Content="Controlado"/>
+                            <ListBoxItem Content="Inquieto"/>
+                            <ListBoxItem Content="Firme"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="09" HorizontalAlignment="Left" Height="140" Margin="115,168,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta9" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Prós e Contras"/>
+                            <ListBoxItem Content="Lógico"/>
+                            <ListBoxItem Content="Descontente"/>
+                            <ListBoxItem Content="Rigido"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="10" HorizontalAlignment="Left" Height="140" Margin="220,168,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta10" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Realista"/>
+                            <ListBoxItem Content="Factual"/>
+                            <ListBoxItem Content="Crítico"/>
+                            <ListBoxItem Content="Independente"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="11" HorizontalAlignment="Left" Height="140" Margin="325,168,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta11" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Não se destaca"/>
+                            <ListBoxItem Content="Reflexivo"/>
+                            <ListBoxItem Content="Ansioso"/>
+                            <ListBoxItem Content="Persistente"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="12" HorizontalAlignment="Left" Height="140" Margin="430,168,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta12" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Despretensioso"/>
+                            <ListBoxItem Content="Preconceituoso"/>
+                            <ListBoxItem Content="Alerta"/>
+                            <ListBoxItem Content="Opnioso"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="13" HorizontalAlignment="Left" Height="140" Margin="535,168,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta13" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Auto crítico"/>
+                            <ListBoxItem Content="Observador"/>
+                            <ListBoxItem Content="Extrovertido"/>
+                            <ListBoxItem Content="Moralista"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="14" HorizontalAlignment="Left" Height="140" Margin="640,168,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta14" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Calculista"/>
+                            <ListBoxItem Content="Convincente"/>
+                            <ListBoxItem Content="Móvel"/>
+                            <ListBoxItem Content="Individualista"/>
+                        </ListBox>
+                    </GroupBox>
 
-                </Grid>
-            </TabItem>
-            <TabItem Visibility="Visible" Header="Tab2" x:Name="tab2">
-                <Grid Background="#FFE5E5E5">
-                    <Button x:Name="btnVolta" Content="Button" HorizontalAlignment="Left" Margin="353,217,0,0" VerticalAlignment="Top" Width="75" Click="btnVolta_Click"/>
+                    <Button x:Name="btnSalvar" Content="Salvar" Width="75" Height="20" Click="btnSalvar_Click" Margin="665,604,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <GroupBox Header="15" HorizontalAlignment="Left" Height="140" Margin="10,314,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta15" Margin="0,0,-2,-3" >
+                            <ListBoxItem Content="Autônomo"/>
+                            <ListBoxItem Content="Confiante"/>
+                            <ListBoxItem Content="Estável"/>
+                            <ListBoxItem Content="Evasivo"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox  Header="16" HorizontalAlignment="Left" Height="140" Margin="115,314,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta16" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Diligente"/>
+                            <ListBoxItem Content="Cativante"/>
+                            <ListBoxItem Content="Cordial"/>
+                            <ListBoxItem Content="Maduro"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="17" HorizontalAlignment="Left" Height="140" Margin="220,314,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta17" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Competitivo"/>
+                            <ListBoxItem Content="Equilibrado"/>
+                            <ListBoxItem Content="Ponderado"/>
+                            <ListBoxItem Content="Emotivo"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox  Header="18" HorizontalAlignment="Left" Height="140" Margin="325,314,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta18" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Auto-Confiante"/>
+                            <ListBoxItem Content="Generoso"/>
+                            <ListBoxItem Content="Reservado"/>
+                            <ListBoxItem Content="Análiico"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="19" HorizontalAlignment="Left" Height="140" Margin="430,314,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta19" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Inquisitivo"/>
+                            <ListBoxItem Content="Sociavel"/>
+                            <ListBoxItem Content="Relaxado"/>
+                            <ListBoxItem Content="Alto Padrão"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="20" HorizontalAlignment="Left" Height="140" Margin="535,314,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta20" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Decisivo"/>
+                            <ListBoxItem Content="Agradável"/>
+                            <ListBoxItem Content="Inativo"/>
+                            <ListBoxItem Content="Retraido"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="21" HorizontalAlignment="Left" Height="140" Margin="640,314,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta21" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Aventureiro"/>
+                            <ListBoxItem Content="Influente"/>
+                            <ListBoxItem Content="Comodista"/>
+                            <ListBoxItem Content="Cuidadoso"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="22" HorizontalAlignment="Left" Height="140" Margin="10,459,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta22" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Apostador"/>
+                            <ListBoxItem Content="Crédulo"/>
+                            <ListBoxItem Content="Possessivo"/>
+                            <ListBoxItem Content="Cortês"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="23" HorizontalAlignment="Left" Height="140" Margin="115,459,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta23" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Energético"/>
+                            <ListBoxItem Content="Auto-Promove"/>
+                            <ListBoxItem Content="Sereno"/>
+                            <ListBoxItem Content="Convencional"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="24" HorizontalAlignment="Left" Height="140" Margin="220,459,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta24" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Exigente"/>
+                            <ListBoxItem Content="Emocional"/>
+                            <ListBoxItem Content="Parceiro"/>
+                            <ListBoxItem Content="Sistematico"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="25" HorizontalAlignment="Left" Height="140" Margin="325,459,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta25" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Dominador"/>
+                            <ListBoxItem Content="Impulsivo"/>
+                            <ListBoxItem Content="Previsível"/>
+                            <ListBoxItem Content="Diplomatico"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="26" HorizontalAlignment="Left" Height="140" Margin="430,459,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta26" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Ousado"/>
+                            <ListBoxItem Content="Persuasivo"/>
+                            <ListBoxItem Content="Leal"/>
+                            <ListBoxItem Content="Averiguador"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="27" HorizontalAlignment="Left" Height="140" Margin="535,459,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta27" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Direto"/>
+                            <ListBoxItem Content="Social"/>
+                            <ListBoxItem Content="Paciente"/>
+                            <ListBoxItem Content="Justo"/>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Header="28" HorizontalAlignment="Left" Height="140" Margin="640,459,0,0" VerticalAlignment="Top" Width="100">
+                        <ListBox x:Name="boxResposta28" Margin="0,0,-2,-3">
+                            <ListBoxItem Content="Egocêntrico"/>
+                            <ListBoxItem Content="Entusiasta"/>
+                            <ListBoxItem Content="Passivo"/>
+                            <ListBoxItem Content="Perfeccionista"/>
+                        </ListBox>
+                    </GroupBox>
+
 
                 </Grid>
             </TabItem>
